@@ -1,5 +1,12 @@
+// app/layout.tsx
+
 import "../styles/globals.css";
 import type { ReactNode } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kathleen Gaskin - Decorator’s Workroom",
+};
 
 interface LayoutProps {
   children: ReactNode;

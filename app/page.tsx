@@ -1,21 +1,13 @@
-import Head from "next/head";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import styles from "./page.module.css";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Kathleen Gaskin - Decorator’s Workroom</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
       <Navbar />
+      <header className={styles.header}></header>
       <HeroSection />
-      <header className={styles.header}>
-        <h1>Kathleen Gaskin - Decorator’s Workroom</h1>
-      </header>
-
       <div className={styles.main}>
         <section id="about">
           <h2>About Kathleen Gaskin</h2>
@@ -69,4 +61,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;

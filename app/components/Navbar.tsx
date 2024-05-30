@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import styles from "./Navbar.module.css";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const toggleMenu = () => {
     const navLinks = document.querySelector(`.${styles.navlinks}`);
     navLinks?.classList.toggle(styles.active);
@@ -13,14 +13,17 @@ const Navbar = () => {
     const hamburger = document.querySelector(`.${styles.hamburger}`);
     const closeIcon = document.querySelector(`.${styles.closeIcon}`);
 
-    hamburger?.addEventListener("click", toggleMenu);
-    closeIcon?.addEventListener("click", toggleMenu);
+    if (hamburger && closeIcon) {
+      hamburger.addEventListener("click", toggleMenu);
+      closeIcon.addEventListener("click", toggleMenu);
+    }
 
-    // Cleanup event listener on component unmount
-
+    // Cleanup event listeners on component unmount
     return () => {
-      hamburger?.removeEventListener("click", toggleMenu);
-      closeIcon?.removeEventListener("click", toggleMenu);
+      if (hamburger && closeIcon) {
+        hamburger.removeEventListener("click", toggleMenu);
+        closeIcon.removeEventListener("click", toggleMenu);
+      }
     };
   }, []);
 
