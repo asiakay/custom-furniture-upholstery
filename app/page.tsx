@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -10,9 +11,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Navbar />
+      <HeroSection />
       <header className={styles.header}>
         <h1>Kathleen Gaskin - Decorator’s Workroom</h1>
       </header>
+
       <div className={styles.main}>
         <section>
           <h2>About Kathleen Gaskin</h2>
