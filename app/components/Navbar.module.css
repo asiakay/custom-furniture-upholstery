@@ -1,0 +1,50 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbrand {
+  font-size: 1.5em;
+}
+
+.navlinks {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navlinks li {
+  margin-left: 20px;
+}
+
+.navlinks a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navlinks.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

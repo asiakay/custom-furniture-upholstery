@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Navbar from "./components/Navbar";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
         <title>Kathleen Gaskin - Decorator’s Workroom</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
+      <Navbar />
       <header className={styles.header}>
         <h1>Kathleen Gaskin - Decorator’s Workroom</h1>
       </header>
