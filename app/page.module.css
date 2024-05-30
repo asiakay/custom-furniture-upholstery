@@ -1,0 +1,38 @@
+.container {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background: #f4f4f4;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.main section {
+  margin-bottom: 20px;
+}
+
+.classes {
+  list-style: none;
+  padding: 0;
+}
+
+.classes li {
+  background: #e4e4e4;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
