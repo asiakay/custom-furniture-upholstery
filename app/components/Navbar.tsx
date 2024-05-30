@@ -4,14 +4,14 @@ import { useEffect } from "react";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const toggleMenu = () => {
+    const navLinks = document.querySelector(`.${styles.navlinks}`);
+    navLinks?.classList.toggle(styles.active);
+  };
+
   useEffect(() => {
     const hamburger = document.querySelector(`.${styles.hamburger}`);
     const closeIcon = document.querySelector(`.${styles.closeIcon}`);
-    const navLinks = document.querySelector(`.${styles.navlinks}`);
-
-    const toggleMenu = () => {
-      navLinks?.classList.toggle(styles.active);
-    };
 
     hamburger?.addEventListener("click", toggleMenu);
     closeIcon?.addEventListener("click", toggleMenu);
@@ -30,13 +30,19 @@ const Navbar = () => {
       <ul className={styles.navlinks}>
         <li className={styles.closeIcon}>&times;</li>
         <li>
-          <a href="#about">About</a>
+          <a href="#about" onClick={toggleMenu}>
+            About
+          </a>
         </li>
         <li>
-          <a href="#specialty">Specialty</a>
+          <a href="#specialty" onClick={toggleMenu}>
+            Specialty
+          </a>
         </li>
         <li>
-          <a href="#classes">Classes</a>
+          <a href="#classes" onClick={toggleMenu}>
+            Classes
+          </a>
         </li>
       </ul>
       <div className={styles.hamburger}>&#9776;</div>

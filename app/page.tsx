@@ -17,7 +17,7 @@ export default function Home() {
       </header>
 
       <div className={styles.main}>
-        <section>
+        <section id="about">
           <h2>About Kathleen Gaskin</h2>
           <p>
             Kathleen Gaskin is the proprietor of Decorator’s Workroom in Jamaica
@@ -36,11 +36,11 @@ export default function Home() {
           </p>
           <p>Kathleen first taught at the Eliot School in 1991.</p>
         </section>
-        <section>
+        <section id="specialty">
           <h2>Specialty</h2>
           <p>Upholstery & Slipcovers</p>
         </section>
-        <section>
+        <section id="classes">
           <h2>Upcoming Classes</h2>
           <ul className={styles.classes}>
             <li>
