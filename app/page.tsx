@@ -1,11 +1,9 @@
-import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import styles from "./page.module.css";
 
 const Home = () => {
   return (
     <div className={styles.container}>
-      <Navbar />
       <header className={styles.header}></header>
       <HeroSection />
       <div className={styles.main}>
